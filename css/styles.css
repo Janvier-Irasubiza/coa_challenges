@@ -1,6 +1,7 @@
 body {
     margin: 0;
     background-color: black;
+    font-family: "Poppins", sans-serif; 
 }
 
 .container {
@@ -121,7 +122,6 @@ body {
     }
 }
 
-/* Modal CSS */
 .modal {
     display: none;
     position: fixed;
@@ -130,6 +130,8 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
+    padding: 0;
+    margin: 0;
     overflow: auto;
     background-color: rgba(0,0,0,0.7);
     backdrop-filter: blur(5px);
@@ -137,14 +139,27 @@ body {
 
 .modal-content {
     background-color: #fff;
-    margin: 10% auto;
+    margin: 0px;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
-    max-width: 800px;
+    width: 100%;
+    height: 100%;
     display: flex;
+    justify-content: center;
+    gap: 3em;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     animation: fadeIn 0.4s;
+    box-sizing: border-box;
+}
+
+.info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-header h2 {
+    margin: 0px;
 }
 
 .modal-content img {
@@ -160,6 +175,22 @@ body {
 
 .modal-content h2 {
     margin-top: 0;
+}
+
+.download {
+    color: #2b2a2a;
+    padding: 3px 8px;
+    border: 1.5px solid #cbcbcb;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.8em;
+    transition: background-color 0.3s ease;
+}
+
+.download:hover {
+    background-color: #cbcbcb;
+    border: none;
+    padding: 3px 9.5px;
 }
 
 .close {

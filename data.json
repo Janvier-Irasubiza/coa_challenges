@@ -1,0 +1,27 @@
+[
+    {
+      "title": "Fennec Fox",
+      "location": "India",
+      "description": "The Fennec Fox is a small nocturnal fox found in the Sahara of North Africa. Its most distinctive feature is its unusually large ears, which serve to dissipate heat.",
+      "img": "images/fox.png"
+    },
+    {
+      "title": "Humpback Whale",
+      "location": "South Africa",
+      "description": "The Humpback Whale is a species of baleen whale known for its spectacular breaching behavior and complex songs. They are found in oceans and seas around the world.",
+      "img": "images/whale.png"
+    },
+    {
+      "title": "Common Brown Baboon",
+      "location": "South Africa",
+      "description": "The Common Brown Baboon is one of the largest monkeys and has a distinctive long, dog-like snout. They are found in a variety of habitats, including savannas and tropical rain-forests.",
+      "img": "images/baboon.png"
+    },
+    {
+      "title": "Spotted Deer",
+      "location": "Amazon",
+      "description": "The Spotted Deer, also known as Chital, is a species of deer that is native to the Indian subcontinent. They have a distinctive white-spotted coat and are often found in large herds in forested areas.",
+      "img": "images/deer.png"
+    }
+  ]
+  

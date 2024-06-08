@@ -12,57 +12,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/d-din" rel="stylesheet">
+
 </head>
 <body>
     <div class="container">
-        <div class="card" data-img="images/fox.png" data-title="Fennec Fox" data-location="India" data-description="The Fennec Fox is a small nocturnal fox found in the Sahara of North Africa. Its most distinctive feature is its unusually large ears, which serve to dissipate heat.">
-            <img src="images/fox.png" alt="Fennec Fox">
-            <div class="card-content">
-                <h2>Fennec Fox</h2>
-                <p class="location">India</p>
-                <a href="#" class="more-info">Know more <i class="fa-solid fa-arrow-right font"></i></a>
-            </div>
-        </div>
-        <div class="card" data-img="images/whale.png" data-title="Humpback Whale" data-location="South Africa" data-description="The Humpback Whale is a species of baleen whale known for its spectacular breaching behavior and complex songs. They are found in oceans and seas around the world.">
-            <div>
-                <img src="images/whale.png" alt="Humpback Whale">
-            </div>
-            <div class="card-content">
-                <h2>Humpback Whale</h2>
-                <p class="location">South Africa</p>
-                <a href="#" class="more-info">Know more <i class="fa-solid fa-arrow-right font"></i></a>
-            </div>
-        </div>
-        <div class="card" data-img="images/baboon.png" data-title="Common Brown Baboon" data-location="South Africa" data-description="The Common Brown Baboon is one of the largest monkeys and has a distinctive long, dog-like snout. They are found in a variety of habitats, including savannas and tropical rainforests.">
-            <img src="images/baboon.png" alt="Common Brown Baboon">
-            <div class="card-content">
-                <h2>Common Brown Baboon</h2>
-                <p class="location">South Africa</p>
-                <a href="#" class="more-info">Know more <i class="fa-solid fa-arrow-right font"></i></a>
-            </div>
-        </div>
-        <div class="card" data-img="images/deer.png" data-title="Spotted Deer" data-location="Amazon" data-description="The Spotted Deer, also known as Chital, is a species of deer that is native to the Indian subcontinent. They have a distinctive white-spotted coat and are often found in large herds in forested areas.">
-            <img src="images/deer.png" alt="Spotted Deer">
-            <div class="card-content">
-                <h2>Spotted Deer</h2>
-                <p class="location">Amazon</p>
-                <a href="#" class="more-info">Know more <i class="fa-solid fa-arrow-right font"></i></a>
-            </div>
-        </div>
+        <!-- populated cards for images -->
     </div>
 
     <!-- info -->
     <div id="details" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <img id="modal-img" src="" alt="">
+            <span class="close"><i class="fa-solid fa-angle-left"></i></span>
+            <img id="img" src="" alt="">
             <div class="text-content">
-                <h2 id="modal-title"></h2>
-                <p id="modal-location"></p>
-                <p id="modal-description"></p>
+                <div class="info-header">
+                    <h2 id="title"></h2>
+                    <a id="download" class="download" href="#" download><i class="fa-solid fa-download"></i> Download</a>
+                </div>
+                <div class="info-body">
+                    <p id="location"></p>
+                    <p id="description"></p>
+                </div>
             </div>
         </div>
-    </div>    
+    </div>       
 
     <!-- Scripts -->
     <script src="js/scripts.js"></script>
