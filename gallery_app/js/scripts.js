@@ -1,13 +1,15 @@
-function slugify(text) {
-    return text.toString().toLowerCase()
-        .replace(/\s+/g, '-')
-        .replace(/[^\w\-]+/g, '')
-        .replace(/\-\-+/g, '-')
-        .replace(/^-+/, '')
-        .replace(/-+$/, '');
+function selectedItem(data) {
+    localStorage.setItem("modalData", JSON.stringify(data));
+}
+
+function getModalState() {
+    var modalData = localStorage.getItem("modalData");
+    return modalData ? JSON.parse(modalData) : null;
 }
 
 function showModal(data) {
+    selectedItem(data);
+
     var modal = document.getElementById("details");
     var title = document.getElementById("title");
     var locationElement = document.getElementById("location");
@@ -21,11 +23,34 @@ function showModal(data) {
     img.src = data.img;
     downloadUrl.href = data.img; 
     modal.style.display = "block";
+}
 
-    var slugifiedTitle = slugify(data.title);
-    var url = window.location.origin + '/' + slugifiedTitle;
+function hideModal() {
+    var modal = document.getElementById("details");
+    modal.style.display = "none";
+
+    localStorage.removeItem("modalData");
+    var url = window.location.origin;
     window.history.replaceState({}, '', url);
 }
+
+
+function initializeModalState() {
+    var modalData = getModalState();
+    if (modalData) {
+        showModal(modalData);
+    }
+}
+
+var closeButton = document.querySelector(".close");
+closeButton.addEventListener("click", hideModal);
+
+window.addEventListener("click", function(event) {
+    var modal = document.getElementById("details");
+    if (event.target === modal) {
+        hideModal();
+    }
+});
 
 fetch('data.json')
     .then(response => response.json())
@@ -47,22 +72,5 @@ fetch('data.json')
             });
         });
     })
-    .catch(error => console.error('Error fetching JSON:', error));
 
-var closeButton = document.querySelector(".close");
-closeButton.addEventListener("click", hideModal);
-
-window.addEventListener("click", function(event) {
-    var modal = document.getElementById("details");
-    if (event.target === modal) {
-        hideModal();
-    }
-});
-
-function hideModal() {
-    var modal = document.getElementById("details");
-    modal.style.display = "none";
-
-    var url = window.location.origin;
-    window.history.replaceState({}, '', url);
-}
+window.addEventListener("load", initializeModalState);

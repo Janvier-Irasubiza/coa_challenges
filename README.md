@@ -2,13 +2,12 @@
 
 # 1. Photo gallery app
 
-### What the App Does
+## What the App Does
 The Photo Gallery app allows you to explore a collection of images. By clicking on an image, you can view all the details about it. Plus, you have the option to download the images directly!
 
-### How It Works
-- **Cards**: Each card displays an image, its title, its place of origin, and an option to explore more info about it.
-- **Modal**: Clicking on a card triggers a modal window to appear with content of selected item.
-- **Download Option**: Inside the modal, you'll find a convenient feature that lets you save the full-size image to your device.
+## How It Works
+
+This gallery app utilizes HTML, CSS, and JavaScript to display a collection of images and associated information fetched from a JSON file. Each image is represented as a card, clickable to reveal more details in a modal window. The modal dynamically updates with the clicked image's title, location, description, and an option to download the image. The modal state is managed using localStorage, ensuring that when the user navigates away and returns, the modal retains its state. The app enhances user experience by allowing them to explore images and learn more about each one within an intuitive interface.
 
 ### How It's Set Up
 - **HTML**: the landing page for the app.
